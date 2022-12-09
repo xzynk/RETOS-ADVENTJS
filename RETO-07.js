@@ -1,7 +1,7 @@
 /*
-Mi amigo Dani est· trabajando en una tienda y con la llegada de las navidades tiene el almacÈn hecho un desastre y no encuentra nada.
-Vamos a crear una funciÛn contains que recibe dos par·metros: un objeto que define el almacÈn y el producto que buscamos.
-La funciÛn debe devolver un booleano que indique si se encuentra el string como valor en alg˙n nivel del objeto. Veamos unos ejemplos:
+Mi amigo Dani est√° trabajando en una tienda y con la llegada de las navidades tiene el almac√©n hecho un desastre y no encuentra nada.
+Vamos a crear una funci√≥n contains que recibe dos par√°metros: un objeto que define el almac√©n y el producto que buscamos.
+La funci√≥n debe devolver un booleano que indique si se encuentra el string como valor en alg√∫n nivel del objeto. Veamos unos ejemplos:
 
 const almacen = {
   'estanteria1': {
@@ -15,7 +15,7 @@ const almacen = {
     'cajon1': 'vacio',
     'cajon2': {
       'producto1': 'pantalones',
-      'producto2': 'camiseta' // <- °Est· aquÌ!
+      'producto2': 'camiseta' // <- ¬°Est√° aqu√≠!
     }
   }
 }
@@ -35,7 +35,7 @@ const otroAlmacen = {
 contains(otroAlmacen, 'gameboy') // false
 
 Ten en cuenta que la tienda es enorme. Tiene diferentes almacenes y, como has visto en los ejemplos, cada uno puede tener diferentes organizaciones.
-Lo importante es buscar que el producto est· en los almacenes.
+Lo importante es buscar que el producto est√° en los almacenes.
 */
 
 function contains(store, product) {

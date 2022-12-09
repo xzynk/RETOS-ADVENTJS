@@ -1,7 +1,7 @@
 /*
-En la f·brica de Papa NoÈl ? se acerca el dÌa especial... y todavÌa tenemos un montÛn de cosas por contar. ?
-Por suerte a Mark Zucktheelf ? se le ha ocurrido crear una funciÛn que permita agrupar un array, que puede ser de valores u objetos, a travÈs de una funciÛn o de una propiedad.
-Nos trae un montÛn de ejemplos:
+En la f√°brica de Papa No√©l ? se acerca el d√≠a especial... y todav√≠a tenemos un mont√≥n de cosas por contar. ?
+Por suerte a Mark Zucktheelf ? se le ha ocurrido crear una funci√≥n que permita agrupar un array, que puede ser de valores u objetos, a trav√©s de una funci√≥n o de una propiedad.
+Nos trae un mont√≥n de ejemplos:
 groupBy([6.1, 4.2, 6.3], Math.floor) // { 6: [6.1, 6.3], 4: [4.2] }
 groupBy(['one', 'two', 'three'], 'length') // { 3: ['one', 'two'], 5: ['three'] }
 groupBy([{age: 23}, {age: 24}], 'age') // { 23: [{age: 23}], 24: [{age: 24}] }
@@ -15,9 +15,9 @@ groupBy([
   //9: [{ title: 'Clean Code', rating: 9 }],
   //10: [{ title: 'Aprendiendo Git', rating: 10 }] }
 
-Como ves, la funciÛn groupBy recibe una colecciÛn (array) y una funciÛn o una propiedad, y devuelve un objeto con claves que son los valores de la funciÛn ejecutada pasando
+Como ves, la funci√≥n groupBy recibe una colecci√≥n (array) y una funci√≥n o una propiedad, y devuelve un objeto con claves que son los valores de la funci√≥n ejecutada pasando
 como argumento cada elemento o de la propiedad por cada elemento. Luego los valores son un array de los valores que tengan la misma llave.
-La dificultad del reto est· m·s en comprender la funciÛn que en la implementaciÛn. °Suerte!.
+La dificultad del reto est√° m√°s en comprender la funci√≥n que en la implementaci√≥n. ¬°Suerte!.
 */
 
 function groupBy(collection, it) {
