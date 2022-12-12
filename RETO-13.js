@@ -56,5 +56,6 @@ function wrapGifts(gifts) {
   return [lineaDeSimbolos, stringRegalos(gifts), lineaDeSimbolos].flat()
 }
 
-//wrapGifts(['🏈🎸', '🎮🧸'])
+wrapGifts(['🏈🎸', '🎮🧸'])
 wrapGifts(['📷'])
+wrapGifts(['📷', '⚽️'])

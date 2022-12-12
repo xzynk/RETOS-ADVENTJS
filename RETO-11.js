@@ -30,11 +30,3 @@ function shouldBuyFidelity(times) {
 
   return totalPriceWithDiscount < 12 * times
 }
-
-shouldBuyFidelity(3)
-
-/*
-0
-for (let n = 1; n <= times; n++) {
-  discountedTicketPrice += 12 * 0.75 ** n
-}*/
