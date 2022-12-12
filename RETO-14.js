@@ -26,5 +26,3 @@ function missingReindeer(ids) {
 
   return max === 1 && idSet.size === 1 ? 0 : max + 1
 }
-
-missingReindeer([1])
