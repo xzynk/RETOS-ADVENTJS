@@ -43,3 +43,11 @@ function countPackages(carriers, carrierID) {
   // ¡No olvides compartir tu solución en redes!
   return 0
 }
+
+const carriers = [
+  ['dapelu', 5, ['midu', 'jelowing']],
+  ['midu', 2, []],
+  ['jelowing', 2, []],
+]
+
+countPackages(carriers, 'dapelu') // 9
