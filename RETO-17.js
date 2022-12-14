@@ -40,9 +40,24 @@ countPackages(carriers2, 'camila') // 15
 */
 
 function countPackages(carriers, carrierID) {
+  let carrierDict = {}
+
+  //Guardamos la informacion en un diccionario
+  for (let trans of carriers) {
+    carrierDict[trans[0]] = {
+      capacity: trans[1],
+      subcarriers: trans[2],
+    }
+  }
+
+  //Guardamos la informacion de los ayudantes
+  const subTransport = []
   let capacity = 0
 
-  for (let transport of carriers) {
+  //Añadimos el usuario actual a la fila
+  subTransport.push(carrierID)
+
+  /* for (let transport of carriers) {
     if (transport[0] === carrierID) {
       if (transport[2].length !== 0) {
         for (let subordinado of transport[2]) {
@@ -51,6 +66,29 @@ function countPackages(carriers, carrierID) {
       }
       capacity += transport[1]
     }
-  }
-  return capacity
+  } */
+  return carrierDict
 }
+
+/* Este código parece ser una función recursiva que cuenta el número total de paquetes en un conjunto de transportistas, dado un identificador de transportista específico. Aquí hay algunas sugerencias para mejorar el código:
+
+En lugar de recorrer la lista de transportistas en cada iteración de la función, podría guardar la información sobre el transportista en un diccionario para poder acceder a ella más rápidamente. Esto haría que la función sea más rápida, ya que no tendría que recorrer la lista completa en cada iteración.
+
+En lugar de recorrer el arreglo de identificadores de transportistas secundarios en cada iteración, podría usar una cola para almacenarlos y recorrerlos de manera más eficiente. Esto también mejoraría el rendimiento de la función.
+
+Podría utilizar una variable de contador en lugar de acumular la capacidad en cada iteración. Esto haría que el código sea más claro y más fácil de entender.
+
+Podría utilizar una función auxiliar para recorrer el arreglo de transportistas secundarios, en lugar de hacerlo dentro del cuerpo principal de la función. Esto haría que el código sea más limpio y más fácil de leer.
+
+Aquí hay una posible implementación de la función con estas sugerencias aplicadas: */
+const carriers2 = [
+  ['lolivier', 8, ['camila', 'jesuspoleo']],
+  ['camila', 5, ['sergiomartinez', 'conchaasensio']],
+  ['jesuspoleo', 4, []],
+  ['sergiomartinez', 4, []],
+  ['conchaasensio', 3, ['facundocapua', 'faviola']],
+  ['facundocapua', 2, []],
+  ['faviola', 1, []],
+]
+
+countPackages(carriers2, 'camila') // 15
