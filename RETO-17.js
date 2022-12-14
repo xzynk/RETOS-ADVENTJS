@@ -40,14 +40,17 @@ countPackages(carriers2, 'camila') // 15
 */
 
 function countPackages(carriers, carrierID) {
-  // ¡No olvides compartir tu solución en redes!
-  return 0
+  let capacity = 0
+
+  for (let transport of carriers) {
+    if (transport[0] === carrierID) {
+      if (transport[2].length !== 0) {
+        for (let subordinado of transport[2]) {
+          capacity += countPackages(carriers, subordinado)
+        }
+      }
+      capacity += transport[1]
+    }
+  }
+  return capacity
 }
-
-const carriers = [
-  ['dapelu', 5, ['midu', 'jelowing']],
-  ['midu', 2, []],
-  ['jelowing', 2, []],
-]
-
-countPackages(carriers, 'dapelu') // 9
