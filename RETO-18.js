@@ -22,9 +22,20 @@ fixFiles(files3) // ['file', 'file(1)', 'icon', 'icon(1)', 'icon(1)(1)']
 Por cierto, nos han dicho que son Agile y usan Scrum. Por eso quieren saber cuánto tiempo vas a tardar para saber cuándo van a poder usarlo. Que hay prisa. 😝 Así que entra a Discord y cuéntanos. */
 
 function fixFiles(files) {
-  // ¡No olvides compartir tu solución en redes!
-  return []
-}
+  //Crear un objeto para almacenar los archivos unicos
+  const unique = {}
+  //Crear un objeto para almacenar los contadores de cada archivo
+  const counter = {}
 
-const files = ['photo', 'postcard', 'photo', 'photo', 'video']
-fixFiles(files) // ['photo', 'postcard', 'photo(1)', 'photo(2)', 'video']
+  for (let file of files) {
+    //Si el archivo no existe en el objeto, agregamos como un clave y su valor
+    if (unique[file] === undefined) {
+      unique[file] = file
+    } else {
+      let count = counter[file] || 1
+      unique[`${file}(${count})`] = `${file}(${count})`
+      counter[file] = count + 1
+    }
+  }
+  return Object.values(unique)
+}
