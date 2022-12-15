@@ -33,9 +33,21 @@ canCarry(1, [[2, 3, 8]]) // false -> no podría ni con el primer viaje
 canCarry(2, [[1, 2, 4], [2, 3, 8]]) // false -> del punto 3 al 4 supera la capacidad máxima porque llevaría 3 regalos
 Lo difícil, e importante, es que entiendas que Santa Claus va entregando y recogiendo regalos y que a veces eso puede hacer que supere la carga máxima. */
 
-function canCarry(capacity, trip) {}
+function canCarry(capacity, trip) {
+  let carga = 0
 
-canCarry(3, [
-  [1, 1, 5],
-  [2, 2, 10],
-]) // true
+  for (let i = 1; i <= 10; i++) {
+    for (let j = 0; j < trip.length; j++) {
+      const transportar = trip[j][0]
+      const recogida = trip[j][1]
+      const entrega = trip[j][2]
+
+      if (carga > capacity) return false
+      if (recogida === i) carga += transportar
+      if (entrega === i) carga -= transportar
+      console.log(carga)
+    }
+  }
+
+  return true
+}
