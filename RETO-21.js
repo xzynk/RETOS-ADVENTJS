@@ -45,7 +45,6 @@ function canCarry(capacity, trip) {
       if (carga > capacity) return false
       if (recogida === i) carga += transportar
       if (entrega === i) carga -= transportar
-      console.log(carga)
     }
   }
 
