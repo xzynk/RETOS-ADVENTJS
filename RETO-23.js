@@ -78,3 +78,15 @@ function canReconfigure(from, to) {
 
   return true
 }
+
+canReconfigure('BAL', 'LIB') // true
+canReconfigure('CON', 'JUU') // false
+canReconfigure('MMM', 'MID') // false
+canReconfigure('AA', 'MID') // false
+canReconfigure('MID', 'AA') // false
+canReconfigure('XBOX', 'XXOB') // false
+canReconfigure('XBOX', 'XOBX') // true
+canReconfigure('xxxMMM', 'aaaDDD') // true
+canReconfigure('aaaDDDmmm', 'aaaDDDmmm') // true
+canReconfigure('xxxqqqeeefffggg', 'xxxqqqeeefffgg') // false
+canReconfigure('abcdefghijkl', 'lkjihgfedcba') // true
